@@ -1,9 +1,16 @@
 const fs = require("fs");
+const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-MM-dd");
   });
+
+  eleventyConfig.addFilter("wordCount", (body) => {
+    return "" + (body.match(/\s/g) || []).length;
+  });
+
+  eleventyConfig.setDataDeepMerge(true);
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
@@ -75,10 +82,8 @@ module.exports = function (eleventyConfig) {
 
     // These are all optional (defaults are shown):
     dir: {
-      input: ".",
-      includes: "_includes",
-      data: "_data",
-      output: "_site",
+      input: "src",
+      output: "docs",
     },
   };
 };

@@ -1,0 +1,5 @@
+{% for tag in tags %}
+  {% if tag != "posts" %}
+    <span class='badge badge-secondary'><i class="lni lni-tag"></i> {{tag}}</span>
+  {% endif %}
+{% endfor %}

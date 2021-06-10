@@ -1,0 +1,13 @@
+---
+title: Blog
+layout: layouts/posts.njk
+---
+
+{% for post in collections.posts | reverse %}
+  <a href='{{post.url}}'>
+  <h3>{{post.data.title}}</h3>
+  <em>Posted on <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></em>
+  {% set tags = post.data.tags %}
+  {% include 'partials/tags.njk' %}
+  </a>
+{% endfor %}<br/><br/>
