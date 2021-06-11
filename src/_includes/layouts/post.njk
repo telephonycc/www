@@ -8,17 +8,14 @@ layout: layouts/base.njk
 
 
     <br>
-    <a href='/blog/'>&laquo; Back to All Posts</a>
-    <br><br>
 
-    <div style='border:1px solid #eee; background: #fff;padding: 2.5em; margin: 0 -2.5em 0 -2.5em;box-shadow: 5px 5px 0 #eee'>
+    <div>
     <h2>{{title}}</h2>
     <small><em>Posted on <time class="postlist-date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></em></small>
 
     {% include 'partials/tags.njk' %}
 
-    
-    <hr>
+    <br>
 
     {{excerpt}}
     {{content | safe}}

@@ -10,10 +10,7 @@ h3 a {
 h3 {
   font-size: 2rem;
 }
-.prose h2 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: lighter;
-}
+
 .prose .post a {
   color: inherit;
   text-decoration: underline;
@@ -52,7 +49,7 @@ h3 {
     {{post.data.title}}
     </a>
   </h3>
-  <p>{{post.data.excerpt}}</p>
+  <p style='font-size:1.125rem'>{{post.data.excerpt}}</p>
 
   <small>Published <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></small>
     {% set tags = post.data.tags %} {% include "partials/tags.njk" %}
