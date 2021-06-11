@@ -56,8 +56,6 @@
         margin: 1em 0;
       }
       html,body,p{
-        color: #333;
-        font-size: initial;
         line-height: 1.5;
       }
 
@@ -74,6 +72,7 @@
       .container{
         max-width: 960px;
       }
+      
       section ul, section ul li { 
    list-style-type: disc; 
    list-style-position: inside; 
@@ -120,7 +119,7 @@ section ol ol, section ul ol {
                       <a class="page-scroll" href="/blog/">Blog</a>
                     </li>
                     <li class="nav-item active">
-                      <a class="page-scroll" href="https://mailchi.mp/c69181416ea6/waitlist">Sign Up</a>
+                      <a class="page-scroll" href="/#cta">Sign Up</a>
                     </li>
                   </ul>
                 </div> <!-- navbar collapse -->
@@ -131,16 +130,9 @@ section ol ol, section ul ol {
       </div> <!-- navbar area -->
     </header>
 
-    <br><br>
-    
-    <section class='section-padding bg-gray'>
-    
-    <div class='container'>
-
     {{ content | safe }}
-    </div>
-    </div>
-    </section>
+    
+    
     
   
     <!-- Testimonial Section Start -->
@@ -153,6 +145,10 @@ section ol ol, section ul ol {
             <a style='color: inherit' href='mailto:hello@telephony.cc'><i class='lni lni-envelope'></i> hello@telephony.cc</a>
             <br>
             <a style='color: inherit' href='https://twitter.com/telephony_cc'><i class='lni lni-twitter'></i> @telephony_cc</a>
+            <br>
+            <a style='color: inherit' href='https://github.com/telephonycc'><i class='lni lni-github'></i> @telephonycc</a>
+            
+            
             <br><br><br>
             <small>&copy; 2021 Telephony</small>
           </div>
@@ -161,6 +157,3 @@ section ol ol, section ul ol {
     </section>
   </body>
 </html>
-
-
-

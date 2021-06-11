@@ -2,6 +2,11 @@
 layout: layouts/base.njk
 ---
 
+<section class='section-padding'>
+<br><br>
+<div class='container prose'>
+
+
     <br>
     <a href='/blog/'>&laquo; Back to All Posts</a>
     <br><br>
@@ -9,12 +14,14 @@ layout: layouts/base.njk
     <div style='border:1px solid #eee; background: #fff;padding: 2.5em; margin: 0 -2.5em 0 -2.5em;box-shadow: 5px 5px 0 #eee'>
     <h2>{{title}}</h2>
     <small><em>Posted on <time class="postlist-date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></em></small>
-    {% if tags.length > 1 %}
-    &middot;
-    {% endif %}
+
     {% include 'partials/tags.njk' %}
 
     
     <hr>
 
+    {{excerpt}}
     {{content | safe}}
+
+    </div>
+    </section>

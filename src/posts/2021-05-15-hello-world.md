@@ -3,11 +3,12 @@ title: Hello, World
 tags:
   - product
 date: 2021-05-15
+excerpt: |
+  Who doesn't love a first blog post? A ribbon cutting ceremony, a grand (re)opening?
+  We all have to start somewhere, right?
 ---
 
-Who doesn't love a first blog post? A ribbon cutting ceremony, a grand (re)opening?
-
-We all have to start somewhere, right? Today marks the launch of the marketing website: <https://www.telephony.cc/>
+Today marks the launch of the marketing website: <https://www.telephony.cc/>
 
 ![](https://jesse.sh/img/telephony.png)
 

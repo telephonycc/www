@@ -20,7 +20,7 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: subpixel-antialiased;
-  color: #abacae;
+  color: #666;
   line-height: 25px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -45,8 +45,7 @@ a {
 p {
   font-weight: 400;
   font-family: 'Open Sans', sans-serif;
-  margin: 0px;
-  font-size: 14px; }
+  margin: 0px; }
 
 ul, ol {
   list-style: outside none none;

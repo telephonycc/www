@@ -3,11 +3,66 @@ title: Blog
 layout: layouts/posts.njk
 ---
 
+<style>
+h3 a {
+  text-decoration: underline;
+}
+h3 {
+  font-size: 2rem;
+}
+.prose h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+}
+.prose .post a {
+  color: inherit;
+  text-decoration: underline;
+}
+.post a:hover {
+  color: #F63854;
+}
+
+.posts .post {
+  padding: 2em 0;
+}  
+
+.posts {
+  color: #585b60;
+}
+
+.posts .post h3 {
+  color: #585b60;
+}
+
+</style>
+
+<div class='container'>
+</div>
+
+<br>
+
+<div class='posts'>
 {% for post in collections.posts | reverse %}
-  <a href='{{post.url}}'>
-  <h3>{{post.data.title}}</h3>
-  <em>Posted on <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></em>
-  {% set tags = post.data.tags %}
-  {% include 'partials/tags.njk' %}
-  </a>
-{% endfor %}<br/><br/>
+<section class='prose'>
+<div class='container'>
+
+  <div class='post'>
+  <h3 style='margin-top:0; font-weight: bold;'>
+    <a href='{{post.url}}'>
+    {{post.data.title}}
+    </a>
+  </h3>
+  <p>{{post.data.excerpt}}</p>
+
+  <small>Published <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></small>
+    {% set tags = post.data.tags %} {% include "partials/tags.njk" %}
+
+
+  </div><!-- .post -->
+
+</div>
+</section>
+  
+{% endfor %}
+</div><!-- .posts -->
+<br/><br/>

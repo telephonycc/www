@@ -32,7 +32,7 @@ module.exports = function (eleventyConfig) {
   });
 
   // Copy the `img` and `css` folders to the output
-  eleventyConfig.addPassthroughCopy("theme-assets");
+  eleventyConfig.addPassthroughCopy("src/theme-assets");
 
   // Override Browsersync defaults (used only with --serve)
   eleventyConfig.setBrowserSyncConfig({
