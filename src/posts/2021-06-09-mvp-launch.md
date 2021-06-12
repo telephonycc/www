@@ -1,10 +1,9 @@
 ---
-title: MVP Launch
+title: Minimum Viable Product in Production
+permalink: /blog/mvp-launch/
 excerpt: |
   I am using Telephony in production! I was able to set up two factor authentication with Mailchimp using one of my virtual numbers. It felt great.
 ---
-
-
 
 Here's where I'm at feature-wise:
 
