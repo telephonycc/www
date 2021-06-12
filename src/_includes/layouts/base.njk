@@ -40,9 +40,7 @@
         padding: 0 !important;
       }
 
-      h2, strong {
-        color: #333 !important;
-      }
+      
       h3 {
         font-size:1.5rem;
         margin: 1em 0 0 0;
@@ -56,6 +54,9 @@
       }
       html,body,p{
         line-height: 1.5;
+      }
+      .home .navpad{
+        padding-top: 0;
       }
 
       img {
@@ -128,6 +129,13 @@ section ol ol, section ul ol {
         </div> <!-- container -->
       </div> <!-- navbar area -->
     </header>
+
+    <script>
+      var tglr = document.querySelector(".navbar-toggler")
+      tglr.addEventListener('click', function(){
+        document.querySelector('.navbar-collapse').classList.toggle('show')
+      })
+    </script>
 
     {{ content | safe }}
     

@@ -40,9 +40,7 @@
         padding: 0 !important;
       }
 
-      h2, strong {
-        color: #333 !important;
-      }
+      
       h3 {
         font-size:1.5rem;
         margin: 1em 0 0 0;
@@ -56,6 +54,9 @@
       }
       html,body,p{
         line-height: 1.5;
+      }
+      .home .navpad{
+        padding-top: 0;
       }
 
       img {
@@ -129,18 +130,18 @@ section ol ol, section ul ol {
       </div> <!-- navbar area -->
     </header>
 
+    <script>
+      var tglr = document.querySelector(".navbar-toggler")
+      tglr.addEventListener('click', function(){
+        document.querySelector('.navbar-collapse').classList.toggle('show')
+      })
+    </script>
+
     
-
-<h2>Blog</h2>
-
-
-<div class='tags'>
-
-</div>
-
-<hr>
-
-
+<section class='section-padding' style='padding-top: 6em'>
+  <div class='container prose'>
+    
+    
 <style>
 h3 a {
   text-decoration: underline;
@@ -161,13 +162,15 @@ h3 {
   padding: 2em 0;
 }  
 
-.posts {
+.posts, h2 {
   color: #585b60;
 }
 
 .posts .post h3 {
   color: #585b60;
 }
+
+
 
 </style>
 
@@ -178,8 +181,7 @@ h3 {
 
 <div class='posts'>
 
-<section class='prose'>
-<div class='container'>
+
 
   <div class='post'>
   <h3 style='margin-top:0; font-weight: bold;'>
@@ -187,25 +189,23 @@ h3 {
     MVP Launch
     </a>
   </h3>
-  <p style='font-size:1.125rem'>I am using Telephony in production! I was able to set up two factor authentication with Mailchimp using one of my virtual numbers. It felt great.
-</p>
-
-  <small>Published <time class="postlist-date" datetime="2021-06-09">2021-06-09</time></small>
+  <small><time class="postlist-date" datetime="2021-06-09">2021-06-09</time></small>
      <div class='tags'>
 
   
 
 </div>
+  <p style='font-size:1.125rem'>I am using Telephony in production! I was able to set up two factor authentication with Mailchimp using one of my virtual numbers. It felt great.
+</p>
+
+  
 
 
   </div><!-- .post -->
 
-</div>
-</section>
   
 
-<section class='prose'>
-<div class='container'>
+
 
   <div class='post'>
   <h3 style='margin-top:0; font-weight: bold;'>
@@ -213,11 +213,7 @@ h3 {
     Hello, World
     </a>
   </h3>
-  <p style='font-size:1.125rem'>Who doesn&#39;t love a first blog post? A ribbon cutting ceremony, a grand (re)opening?
-We all have to start somewhere, right?
-</p>
-
-  <small>Published <time class="postlist-date" datetime="2021-05-15">2021-05-15</time></small>
+  <small><time class="postlist-date" datetime="2021-05-15">2021-05-15</time></small>
      <div class='tags'>
 
   
@@ -227,18 +223,22 @@ We all have to start somewhere, right?
   
 
 </div>
+  <p style='font-size:1.125rem'>Who doesn&#39;t love a first blog post? A ribbon cutting ceremony, a grand (re)opening?
+We all have to start somewhere, right?
+</p>
+
+  
 
 
   </div><!-- .post -->
 
-</div>
-</section>
   
 
 </div><!-- .posts -->
 <br/><br/>
 
-
+  </div>
+</section>
     
     
     

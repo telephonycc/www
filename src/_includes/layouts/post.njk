@@ -1,24 +1,18 @@
 ---
-layout: layouts/base.njk
+layout: layouts/page.njk
 ---
 
-<section class='section-padding'>
-<br><br>
-<div class='container prose'>
+<small>
+    <em>Posted on 
+        <time class="postlist-date" datetime="{{ page.date | htmlDateString }}">
+            {{ page.date | readableDate }}
+        </time>
+    </em>
+</small>
 
+{% include 'partials/tags.njk' %}
 
-    <br>
+<br>
 
-    <div>
-    <h2>{{title}}</h2>
-    <small><em>Posted on <time class="postlist-date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></em></small>
-
-    {% include 'partials/tags.njk' %}
-
-    <br>
-
-    {{excerpt}}
-    {{content | safe}}
-
-    </div>
-    </section>
+{{excerpt}}
+{{content | safe}}

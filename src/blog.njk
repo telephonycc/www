@@ -1,6 +1,5 @@
 ---
-title: Blog
-layout: layouts/posts.njk
+layout: layouts/page.njk
 ---
 
 <style>
@@ -23,13 +22,15 @@ h3 {
   padding: 2em 0;
 }  
 
-.posts {
+.posts, h2 {
   color: #585b60;
 }
 
 .posts .post h3 {
   color: #585b60;
 }
+
+
 
 </style>
 
@@ -40,8 +41,7 @@ h3 {
 
 <div class='posts'>
 {% for post in collections.posts | reverse %}
-<section class='prose'>
-<div class='container'>
+
 
   <div class='post'>
   <h3 style='margin-top:0; font-weight: bold;'>
@@ -49,16 +49,15 @@ h3 {
     {{post.data.title}}
     </a>
   </h3>
+  <small><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></small>
+    {% set tags = post.data.tags %} {% include "partials/tags.njk" %}
   <p style='font-size:1.125rem'>{{post.data.excerpt}}</p>
 
-  <small>Published <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></small>
-    {% set tags = post.data.tags %} {% include "partials/tags.njk" %}
+  
 
 
   </div><!-- .post -->
 
-</div>
-</section>
   
 {% endfor %}
 </div><!-- .posts -->
