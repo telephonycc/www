@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "eleventy"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/telephonycc/www#readme",
   "dependencies": {
+    "@11ty/eleventy": "^0.12.1",
     "luxon": "^1.27.0"
   }
 }
